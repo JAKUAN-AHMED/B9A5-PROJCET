@@ -7,7 +7,7 @@ for(const btn of AllBtn)
         count+=1;
         const section=event.target.innerText;
         const seatType="economy";
-        const price=500;
+        const price=550;
         showClassSeat('appendSide',section,seatType,price);
         if(count<=4)
         {
