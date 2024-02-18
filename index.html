@@ -70,7 +70,7 @@
             <div class="hero lg:min-h-screen bg-[url('./images/banner.png')] lg:rounded-3xl">
                 <div class="hero-content text-center text-neutral-content">
                   <div class="max-w-md">
-                    <h1 class="mb-5 text-white lg:text-6xl font-extrabold sm:text-3xl">End-to-End Travel with</h1>
+                    <h1 class="mb-5 text-white lg:text-4xl font-extrabold sm:text-3xl">End-to-End Travel with</h1>
                     <h1 class="mb-5 sm:text-3xl text-[#1DD100] lg:text-6xl font-extrabold">P Paribahan</h1>
                     <p class="mb-5 font-medium text-[#FFFFFF] sm:text-xl">Yes, you can run unit tests and view the results directly testing features allow for a streamlined .</p>
                     <button class="btn btn-warning">Buy Tickets</button>
@@ -128,7 +128,7 @@
                         <div class="flex">
                             <button class="flex text-base text-[#1DD100] bg-green-100 btn">
                                 <img src="./images/seat-green.png" alt="">
-                                <p><span>40</span> Seats left</p>
+                                <p><span id="setAvailable">40</span> Seats left</p>
                             </button>
                         </div>
                     </div>
@@ -152,7 +152,7 @@
                 </div>
                 <img src="./images/info-devider.png" alt="">
                 <div class="items-center justify-center w-[200px] mt-32">
-                    <img src="./images/fare.png" alt="">
+                    <img class="pl-16" src="./images/fare.png" alt="">
                     <h1 class="text-2xl text-center text-[#030712] font-bold">550 Taka
                     </h1>
                     <p class="text-xl text-center">Per Seat</p>
@@ -175,7 +175,7 @@
                             </div>
                             <div class="flex text-[#1DD100]">
                                 <img class="text-[#1DD100]" src="./images/seat-green-filled.png" alt="">
-                                <h2>Available</h2>
+                                <h2>Selected</h2>
                             </div>
                         </div>
                         <br>
@@ -189,116 +189,109 @@
 
                         <div class=" flex justify-between m-8">
                             <p class="items-center">A</p>
-                            <button class="btn w-[100px]">A1</button>
-                            <button class="btn w-[100px]">A2</button>
-                            <button class="btn w-[100px]">A3</button>
-                            <button class="btn w-[100px]">A4</button>
+                            <button class="btn button w-[100px]">A1</button>
+                            <button class="btn button w-[100px]">A2</button>
+                            <button class="btn button w-[100px]">A3</button>
+                            <button class="btn button w-[100px]">A4</button>
                         </div>
                         <div class="flex justify-between m-8">
                             <p>B</p>
-                            <button class="btn w-[100px]">B1</button>
-                            <button class="btn w-[100px]">B2</button>
-                            <button class="btn w-[100px]">B3</button>
-                            <button class="btn w-[100px]">B4</button>
+                            <button class="btn button w-[100px]">B1</button>
+                            <button class="btn button w-[100px]">B2</button>
+                            <button class="btn button w-[100px]">B3</button>
+                            <button class="btn button w-[100px]">B4</button>
                         </div>
                         <div class="flex justify-between m-8">
                             <p>C</p>
-                            <button class="btn w-[100px]">C1</button>
-                            <button class="btn w-[100px]">C2</button>
-                            <button class="btn w-[100px]">C3</button>
-                            <button class="btn w-[100px]">C4</button>
+                            <button class="btn button w-[100px]">C1</button>
+                            <button class="btn button w-[100px]">C2</button>
+                            <button class="btn button w-[100px]">C3</button>
+                            <button class="btn button w-[100px]">C4</button>
                         </div>
                         <div class="flex justify-between m-8">
                             <p>D</p>
-                            <button class="btn w-[100px]">D1</button>
-                            <button class="btn w-[100px]">D2</button>
-                            <button class="btn w-[100px]">D3</button>
-                            <button class="btn w-[100px]">D4</button>
+                            <button class="btn button w-[100px]">D1</button>
+                            <button class="btn button w-[100px]">D2</button>
+                            <button class="btn button w-[100px]">D3</button>
+                            <button class="btn button w-[100px]">D4</button>
                         </div>
                         <div class="flex justify-between m-8">
                             <p>E</p>
-                            <button class="btn w-[100px]">E1</button>
-                            <button class="btn w-[100px]">E2</button>
-                            <button class="btn w-[100px]">E3</button>
-                            <button class="btn w-[100px]">E4</button>
+                            <button class="btn button w-[100px]">E1</button>
+                            <button class="btn button w-[100px]">E2</button>
+                            <button class="btn button w-[100px]">E3</button>
+                            <button class="btn button w-[100px]">E4</button>
                         </div>
                         <div class="flex justify-between m-8">
                             <p>F</p>
-                            <button class="btn w-[100px]">F1</button>
-                            <button class="btn w-[100px]">F2</button>
-                            <button class="btn w-[100px]">F3</button>
-                            <button class="btn w-[100px]">F4</button>
+                            <button class="btn button w-[100px]">F1</button>
+                            <button class="btn button w-[100px]">F2</button>
+                            <button class="btn button w-[100px]">F3</button>
+                            <button class="btn button w-[100px]">F4</button>
                         </div>
                         <div class="flex justify-between m-8">
                             <p>G</p>
-                            <button class="btn w-[100px]">G1</button>
-                            <button class="btn w-[100px]">G2</button>
-                            <button class="btn w-[100px]">G3</button>
-                            <button class="btn w-[100px]">G4</button>
+                            <button class="btn button w-[100px]">G1</button>
+                            <button class="btn button w-[100px]">G2</button>
+                            <button class="btn button w-[100px]">G3</button>
+                            <button class="btn button w-[100px]">G4</button>
                         </div>
                         <div class="flex justify-between m-8">
                             <p>H</p>
-                            <button class="btn w-[100px]">H1</button>
-                            <button class="btn w-[100px]">H2</button>
-                            <button class="btn w-[100px]">H3</button>
-                            <button class="btn w-[100px]">H4</button>
+                            <button class="btn button  w-[100px]">H1</button>
+                            <button class="btn button  w-[100px]">H2</button>
+                            <button class="btn button  w-[100px]">H3</button>
+                            <button class="btn button  w-[100px]">H4</button>
                         </div>
                         <div class="flex justify-between m-8">
                             <p>I</p>
-                            <button class="btn w-[100px]">I1</button>
-                            <button class="btn w-[100px]">I2</button>
-                            <button class="btn w-[100px]">I3</button>
-                            <button class="btn w-[100px]">I4</button>
+                            <button class="btn button w-[100px]">I1</button>
+                            <button class="btn button w-[100px]">I2</button>
+                            <button class="btn button w-[100px]">I3</button>
+                            <button class="btn button w-[100px]">I4</button>
                         </div>
                         <div class="flex justify-between m-8">
                             <p>J</p>
-                            <button class="btn w-[100px]">J1</button>
-                            <button class="btn w-[100px]">J2</button>
-                            <button class="btn w-[100px]">J3</button>
-                            <button class="btn w-[100px]">J4</button>
+                            <button class="btn button w-[100px]">J1</button>
+                            <button class="btn button w-[100px]">J2</button>
+                            <button class="btn button w-[100px]">J3</button>
+                            <button class="btn button w-[100px]">J4</button>
                         </div>
 
                     </div>
 
 
-                    <!-- secound side note -->
+                    <!-- second side note -->
 
                     <div class="">
                         <h2 class="text-2xl font-bold">Select Your Seat</h2>
                         <div class="pt-8 mt-14 bg-[#F7F8F8] p-8 rounded-xl">
                             <div class="flex justify-between mt-14">
-                                <h2>Seat <span class="text-[#1DD100]">2</span></h2>
+                                <h2>Seat <span id="seatTwist" class="bg-[#1DD100] text-white rounded-xl">0</span> </h2>
                                 <h2>class</h2>
                                 <h2>Price</h2>
                             </div>
-                            <div class="flex justify-between mt-4">
-                                <h2>C2</h2>
-                                <h2>Economoy</h2>
-                                <h2>550</h2>
-                            </div>
-                            <div class="flex justify-between mt-4">
-                                <h2>C2</h2>
-                                <h2>Economoy</h2>
-                                <h2>550</h2>
-                            </div>
+                            <hr>
+                            <ul id="appendSide" class="flex justify-between mt-4">
+                                
+                            </ul>
                             <br>
                             <hr>
-
                             <div class="flex text-2xl justify-between mt-4">
 
                                 <h1>Total Price</h1>
-                                <h2>1100</h2>
+                                <h2>0</h2>
                             </div>
                             <br>
                             <div>
                                 <label class="input input-bordered flex items-center gap-2">
                                     <input type="text" class="grow" placeholder="Search" />
-                                    <button class="btn h-[20px] bg-[#1DD100]">Apply</button>
+                                    <button class="btn btn-warning w-[100px] ml-12 text-center items-center">Apply</button>
                                 </label>
                             </div>
                             <div class="flex text-2xl justify-between mt-4">
                                 <h1>Grand Total</h1>
-                                <h2>BDT 1100</h2>
+                                <h2>BDT 0</h2>
                             </div>
                         </div>
                         <div class="mt-4 space-y-4">
@@ -306,11 +299,12 @@
                             <br>
                             <input type="text" placeholder="Enter your name"class="input input-bordered w-full max-w-xs" />
                             <br>
-                            <label class="text-xs" for="">Phone Number</label>
+                            <label  for="">Phone Number</label>
+                            <br>
                             <input type="text" placeholder="Enter you Phone number"
                                 class="input input-bordered w-full max-w-xs" />
                             <br>
-                            <label for="">Email ID*</label>
+                            <label for="">Email ID</label>
                             <br>
                             <input type="text" placeholder="Enter your Email Id"
                                 class="input  input-bordered w-full max-w-xs" />
@@ -343,5 +337,7 @@
           </div>
         </nav>
       </footer>
+      <script src="scripts/javascripts.js"></script>
+      <script src="scripts/utility.js"></script>
   </body>
 </html>
