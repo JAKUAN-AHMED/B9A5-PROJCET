@@ -62,3 +62,5 @@ function classSeat(elementId,count)
     const element=document.getElementById('seatTwist');
     element.innerText=count;
 }
+
+

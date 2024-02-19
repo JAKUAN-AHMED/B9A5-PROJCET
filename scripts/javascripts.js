@@ -42,6 +42,14 @@ let freq={
     'J4':0,
 
 }
+let frequency={
+    'Next':0,
+}
+
+document.getElementById('applied').addEventListener('click',function(event)
+{
+    document.getElementById('applied').setAttribute('disabled',true);
+});
 const AllBtn=document.getElementsByClassName('button');
 for(const btn of AllBtn)
 {
@@ -53,7 +61,7 @@ for(const btn of AllBtn)
         {
             count++;
         }
-        console.log(freq[section]);
+        
         const seatType="economy";
         const price=550;
         if(count<=4)
@@ -62,7 +70,7 @@ for(const btn of AllBtn)
             {
                 setColor(event);
                 // make button visited if it once used
-    
+                
                 // end her
                 classSeat('seatTwist',count);
                 showClassSeat('appendSide',section,seatType,price);
@@ -77,6 +85,8 @@ for(const btn of AllBtn)
                     let offer1='Couple 20';
                     let discountOFFER1=15;
                     let discountOFFER2=20;
+                    
+
                     document.getElementById('applyID').addEventListener('click',function name()
                     {
                         if((input)===(offer))
