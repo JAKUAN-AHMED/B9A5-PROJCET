@@ -8,11 +8,36 @@ for(const btn of AllBtn)
         const section=event.target.innerText;
         const seatType="economy";
         const price=550;
-        showClassSeat('appendSide',section,seatType,price);
         if(count<=4)
         {
             setColor(event);
-
+            showClassSeat('appendSide',section,seatType,price);
+            calTotal('total-cost',price);
+            GrandTotal('g-total',price);
+            availableSeat('setAvailable');
+            document.getElementById('apply').addEventListener('input',function m(e)
+            {
+                const input=e.target.value;
+                let offer='NEW15';
+                let offer1='Couple 20';
+                let discountOFFER1=15;
+                let discountOFFER2=20;
+                document.getElementById('applyID').addEventListener('click',function name()
+                {
+                    if((input)===(offer))
+                    {
+                        discountThePrice('g-total',discountOFFER1);
+                    }
+                    else if((input)===(offer1)){
+                        discountThePrice('g-total',discountOFFER2);
+                    }
+                    else
+                    {
+                        // console.log('not matched');
+                    }
+                })
+                
+            })
         }
         else
         {
@@ -23,20 +48,14 @@ for(const btn of AllBtn)
             
 
         }
-        availableSeat('setAvailable');
-        const increaseSeat=document.getElementById('seatTwist');
-        increaseSeat.innerText=count;
-        calTotal('total-cost',price);
         // need discount also which is 15 and its has coupon code if matched
-        GrandTotal('g-total',price);
-
         /*
             step-1=>if once visit a button make it true
             step-2=>make button disabled if once used
-            
+             event.target.setAttribute("disabled", true);
         */
+
         
-        event.target.setAttribute("disabled", true);
 
         
 
