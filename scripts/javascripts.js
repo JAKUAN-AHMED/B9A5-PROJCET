@@ -42,19 +42,14 @@ let freq={
     'J4':0,
 
 }
-let frequency={
-    'Next':0,
-}
 
-document.getElementById('applied').addEventListener('click',function(event)
-{
-    document.getElementById('applied').setAttribute('disabled',true);
-});
 const AllBtn=document.getElementsByClassName('button');
 for(const btn of AllBtn)
 {
     btn.addEventListener('click',function handler(event)
     {
+
+        
         const section=event.target.innerText;
         freq[section]++;
         if(freq[section]===1)
@@ -66,6 +61,16 @@ for(const btn of AllBtn)
         const price=550;
         if(count<=4)
         {
+            // disable button
+
+            if(freq[section]>=1)
+            {
+                document.getElementById('pas').removeAttribute('disabled',true);
+                document.getElementById('nub').removeAttribute('disabled',true);
+                document.getElementById('em').removeAttribute('disabled',true);
+                document.getElementById('applied').removeAttribute('disabled',true);
+            }
+    
             if(freq[section]===1)
             {
                 setColor(event);
@@ -117,10 +122,11 @@ for(const btn of AllBtn)
         {
             if(count===5)
             {
+                
                 alert('You selected more than 4 which is not allow');
+        
+    
             }
-            
-
         }
         // need discount also which is 15 and its has coupon code if matched
         /*

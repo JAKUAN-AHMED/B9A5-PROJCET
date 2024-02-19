@@ -63,4 +63,3 @@ function classSeat(elementId,count)
     element.innerText=count;
 }
 
-

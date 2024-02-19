@@ -299,24 +299,24 @@
                             </div>
                         </div>
                         <div class="mt-4 space-y-4">
-                            <form action="">
+                            <form id="frm">
                                 <label class="font-bold" for="">Passenger Name</label>
                                 <br>
-                                <input type="text" required placeholder="Enter your name"class="input input-bordered w-full max-w-xs" />
+                                <input id="pas" type="text" disabled required placeholder="Enter your name"class="input input-bordered w-full max-w-xs" />
                                 <br>
                                 <label class="font-bold"  for="">Phone Number</label>
                                 <br>
-                                <input type="number"  placeholder="Enter you Phone number"
+                                <input id="nub" type="number" disabled  placeholder="Enter you Phone number"
                                     class="input input-bordered w-full max-w-xs" required />
                                 <br>
-                                <label class="font-bold" for="">Email ID</label>
+                                <label class="font-bold"  for="">Email ID</label>
                                 <br>
-                                <input type="email"  placeholder="Enter your Email Id"
+                                <input id="em" type="email" disabled placeholder="Enter your Email Id"
                                     class="input  input-bordered w-full max-w-xs" required/>
                                 <br>
                                 <br>
                                 <!-- Open the modal using ID.showModal() method -->
-                                <button id="applied"  class="btn  button text-white bg-[#1DD100] w-full btn-wide" onclick="my_modal_1.showModal()">Next</button>
+                                <button type="reset" id="applied" disabled class="btn  button text-white bg-[#1DD100] w-full btn-wide" onclick="my_modal_1.showModal()">Next</button>
 
                             </form>
                             <dialog id="my_modal_1" class="modal">
