@@ -42,7 +42,7 @@ let freq={
     'J4':0,
 
 }
-
+let cnt=parseInt(0);
 const AllBtn=document.getElementsByClassName('button');
 for(const btn of AllBtn)
 {
@@ -68,9 +68,38 @@ for(const btn of AllBtn)
                 document.getElementById('pas').removeAttribute('disabled',true);
                 document.getElementById('nub').removeAttribute('disabled',true);
                 document.getElementById('em').removeAttribute('disabled',true);
-                document.getElementById('applied').removeAttribute('disabled',true);
             }
-    
+            document.getElementById('pas').addEventListener('input',function(event)
+            {
+                if(event.target.value.length>3)
+                {
+                    cnt+=1;
+                    checkCnt();
+
+                }
+                
+                
+            });
+            document.getElementById('nub').addEventListener('input',function(event)
+            {
+                
+                if(event.target.value.length>=9)
+                {
+                    cnt+=1;
+                    checkCnt();
+                }
+                
+            });
+            
+            document.getElementById('em').addEventListener('input',function(event)
+            {
+                if(event.target.value.length>=14)
+                {
+                    cnt+=1;
+                    checkCnt();
+                }
+                
+            });
             if(freq[section]===1)
             {
                 setColor(event);
@@ -138,4 +167,8 @@ for(const btn of AllBtn)
     })
 }
 
-
+function checkCnt() {
+    if (cnt === 3) {
+        document.getElementById('applied').removeAttribute('disabled', true);
+    }
+}
