@@ -33,9 +33,10 @@ for(const btn of AllBtn)
         /*
             step-1=>if once visit a button make it true
             step-2=>make button disabled if once used
-            event.target.setAttribute("disabled", true);
+            
         */
-
+        
+        event.target.setAttribute("disabled", true);
 
         
 
