@@ -59,6 +59,12 @@ for(const btn of AllBtn)
         
         const seatType="economy";
         const price=550;
+        if(count>=4)
+        {
+            document.getElementById('apply').removeAttribute('disabled',true);
+            document.getElementById('applyID').removeAttribute('disabled',true);
+        }
+
         if(count<=4)
         {
             // disable button
