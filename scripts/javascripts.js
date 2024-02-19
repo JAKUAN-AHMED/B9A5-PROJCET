@@ -11,10 +11,12 @@ for(const btn of AllBtn)
         if(count<=4)
         {
             setColor(event);
+            classSeat('seatTwist',count);
             showClassSeat('appendSide',section,seatType,price);
             calTotal('total-cost',price);
             GrandTotal('g-total',price);
             availableSeat('setAvailable');
+
             document.getElementById('apply').addEventListener('input',function m(e)
             {
                 const input=e.target.value;

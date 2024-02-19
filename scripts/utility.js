@@ -56,3 +56,9 @@ function discountThePrice(elementId,APPLY)
         discountApplied=true;
     }
 }
+// function countClassSeat
+function classSeat(elementId,count)
+{
+    const element=document.getElementById('seatTwist');
+    element.innerText=count;
+}
